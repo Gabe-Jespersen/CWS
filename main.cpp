@@ -30,9 +30,12 @@ int main(int argc, char **argv)
     int techDiscovered = rand() % 3; //giving a little randomness in beginning, maybe should do this with population and land
 
     vector<int> newStats(3);
-    while(true) //needs to be changed to check for win
+    while(true) 
     {
         clearScreen(); //clearing terminal
+        //checking to see if game is over
+        checkEnd(happiness, techDiscovered, population, landArea);
+
         newStats = nextTurn(population, landArea, techDiscovered, happiness, name, defaultWork); //setting new stats to the ones decided by nextTurn()
         population = newStats.at(0);
         landArea = newStats.at(1);

@@ -67,9 +67,10 @@ vector<int> nextTurn(unsigned long population, unsigned long landArea, int techD
     }
 
 
-    char effortChoice;
+    //checking if player chose to have work default to 3
     if(!defaultWork)
     {
+        char effortChoice;
         cout << "1. Don't work\n" <<
                 "2. Lightly work\n" <<
                 "3. Moderately work (default)\n" <<
