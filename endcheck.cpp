@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void checkEnd(short happiness, int techDiscovered, unsigned long population, unsigned long landArea)
+void checkEnd(short happiness, short techDiscovered, unsigned long population, unsigned long landArea)
 {
     if(happiness < 1)
     {

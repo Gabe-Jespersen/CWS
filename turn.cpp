@@ -12,7 +12,7 @@
 using namespace std;
 
 
-vector<int> nextTurn(unsigned long population, unsigned long landArea, int techDiscovered, short happiness, string name, bool defaultWork)
+vector<long long int> nextTurn(unsigned long population, unsigned long landArea, short techDiscovered, short happiness, string name, bool defaultWork)
 {
     srand(time(NULL)); //uses a little randomness
     double populationMultiplier = 1.05;
@@ -132,11 +132,11 @@ vector<int> nextTurn(unsigned long population, unsigned long landArea, int techD
     {
        techDiscovered++; //discover new tech
     }
-    vector<int> toreturn = {population*populationMultiplier,landArea*landMultiplier,techDiscovered,happiness}; //looks like shit, works
+    vector <long long int> toreturn = {population*populationMultiplier,landArea*landMultiplier,techDiscovered,happiness}; //looks like shit, works
     return toreturn;
 }
 
-vector<double> findMultiplier(int techDiscovered)
+vector<double> findMultiplier(short techDiscovered)
 {
     double populationMultiplier = 1;
     double landMultiplier = 1;

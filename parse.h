@@ -5,6 +5,6 @@
 #ifndef PARSE_H
 #define PARSE_H
 
-std::vector<int> parse(int argc, char **argv);
+std::vector<long long int> parse(int argc, char **argv);
 
 #endif
