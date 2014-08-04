@@ -7,7 +7,7 @@
 
 using namespace std;
 
-vector<long long int> randomEvent(vector<long long int> stats) 
+vector<unsigned long int> randomEvent(vector<long long int> stats) 
 {
     //reading stats from vector the was returned by nextTurn()
     unsigned long population = stats.at(0);
@@ -43,6 +43,6 @@ vector<long long int> randomEvent(vector<long long int> stats)
         cout << "By luck you discover a new technology\n";
         techDiscovered += 1;
     }
-    vector <long long int> toreturn = {population, landArea, techDiscovered, happiness};
+    vector <unsigned long int> toreturn = {population, landArea, techDiscovered, happiness};
     return toreturn;
 }

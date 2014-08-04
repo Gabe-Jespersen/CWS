@@ -53,7 +53,12 @@ int main(int argc, char **argv)
         //checking to see if game is over
         checkEnd(happiness, techDiscovered, population, landArea);
 
-        newStats = randomEvent(nextTurn(population, landArea, techDiscovered, happiness, name, defaultWork)); //setting new stats to the ones decided by nextTurn()
+        newStats = nextTurn(population, landArea, techDiscovered, happiness, name, defaultWork); //setting new stats to the ones decided by nextTurn()
+        if(random) //if random flag, random events may happen
+        {
+            newStats = randomEvent(newStats); //may edit stats
+        }
+
         population = newStats.at(0);
         landArea = newStats.at(1);
         techDiscovered = newStats.at(2);

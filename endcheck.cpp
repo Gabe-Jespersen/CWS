@@ -1,6 +1,7 @@
 //endcheck.cpp
 
 #include <iostream>
+#include <cstdlib>
 
 #include "endcheck.h"
 
